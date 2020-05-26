@@ -114,7 +114,7 @@ def external(request):
     #run([sys.executable , filename, inp] ,shell=False ,stdout = PIPE) 
     media_path = './media/'
     frame_generated_path = './FramesGenerated/'
-    list_of_files = glob.glob('media_path/*.mp4') # * means all if need specific format then *.csv
+    list_of_files = glob.glob('./media/*.mp4') # * means all if need specific format then *.csv
     print(list_of_files)
     latest_file = max(list_of_files, key=os.path.getctime)
     print(latest_file)
