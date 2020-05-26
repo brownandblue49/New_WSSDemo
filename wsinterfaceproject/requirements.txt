@@ -1,5 +1,5 @@
 azure
 Pillow
 NumPy
-django==2.1.7
+django==2.2.10
 opencv-python
