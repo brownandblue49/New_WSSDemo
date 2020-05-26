@@ -111,18 +111,18 @@ def external(request):
         print('Yup path exists', type(path))
     
     #run([sys.executable , filename, inp] ,shell=False ,stdout = PIPE) 
-    media_path = './media'
-    frame_generated_path = './FramesGenerated'
+    media_path = './media/'
+    frame_generated_path = './FramesGenerated/'
     for file_name in listdir(media_path):
             print(os.path.join('/media', file_name))
             file = os.path.join('/media', file_name)
-            file = media_path+file_name
+            #file = media_path+file_name
             print(file)
             
             extractFrames(frame_generated_path , file )
    #uploadtoblob('./FramesGenerated')
    # out = "file submitted Successfully"
-    return render(request , 'home.html' )
+    return render(request , 'EPMFileUpload.html' )
 
 def upload_file(request):  
     if request.method == 'POST': 
@@ -141,5 +141,5 @@ def upload_file(request):
     else:  
     #    profile = ProfileForm()  
     #    return HttpResponse("Fuck") 
-        print('fuck')
+        
         #return render(request,"EPMFileUpload.html",{'form':Profile})  
