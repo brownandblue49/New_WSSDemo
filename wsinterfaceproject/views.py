@@ -31,6 +31,7 @@ def extractFrames(pathOut,filepath):
     # Path to video file 
     cap = cv2.VideoCapture(filepath) 
     print(cap, isfile(filepath))
+    print(filepath)
     #Reducing the frames per second of the video to 2
     cap.set(cv2.CAP_PROP_FPS, 2)   
     # Used as counter variable 
@@ -114,8 +115,8 @@ def external(request):
     media_path = './media/'
     frame_generated_path = './FramesGenerated/'
     for file_name in listdir(media_path):
-            print(os.path.join('/media', file_name))
-            file = os.path.join('/media', file_name)
+            #print(os.path.join('/media', file_name))
+            file = os.path.join(media_path, file_name)
             #file = media_path+file_name
             print(file)
             
