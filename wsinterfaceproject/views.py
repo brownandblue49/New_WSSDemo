@@ -114,13 +114,18 @@ def external(request):
     #run([sys.executable , filename, inp] ,shell=False ,stdout = PIPE) 
     media_path = './media/'
     frame_generated_path = './FramesGenerated/'
-    for file_name in listdir(media_path):
-            #print(os.path.join('/media', file_name))
-            file = os.path.join(media_path, file_name)
-            #file = media_path+file_name
-            print(file)
+    list_of_files = glob.glob('media_path/*.mp4') # * means all if need specific format then *.csv
+    print(list_of_files)
+    latest_file = max(list_of_files, key=os.path.getctime)
+    print(latest_file)
+    extractFrames(frame_generated_path , latest_file )
+    #for file_name in listdir(media_path):
+    #        #print(os.path.join('/media', file_name))
+    #       file = os.path.join(media_path, file_name)
+    #        #file = media_path+file_name
+    #        print(file)
             
-            extractFrames(frame_generated_path , file )
+    #        extractFrames(frame_generated_path , file )
    #uploadtoblob('./FramesGenerated')
    # out = "file submitted Successfully"
     return render(request , 'EPMFileUpload.html' )
