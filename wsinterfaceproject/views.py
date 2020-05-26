@@ -141,5 +141,5 @@ def upload_file(request):
     else:  
     #    profile = ProfileForm()  
     #    return HttpResponse("Fuck") 
-        
+         print("nada")
         #return render(request,"EPMFileUpload.html",{'form':Profile})  
