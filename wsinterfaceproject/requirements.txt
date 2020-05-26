@@ -1,0 +1,4 @@
+azure-storage-blob
+Pillow
+NumPy
+django==2.1.7
