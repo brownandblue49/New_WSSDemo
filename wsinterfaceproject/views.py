@@ -58,7 +58,7 @@ def extractFrames(pathOut,filepath):
             #Calculate size = Height/2 * Width/2
             size = (round(pilImage.size[0]/2), round(pilImage.size[1]/2))
             #Resize using CV2
-            pilImage = pilImage.resize(size, Image.ANTIALIAS)
+            #pilImage = pilImage.resize(size, Image.ANTIALIAS)
             imgByteArr = BytesIO()
             pilImage.save(imgByteArr, format='jpeg')
             #print(type(pilImage))          
